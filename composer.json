@@ -1,0 +1,22 @@
+{
+    "name": "shargin/utils",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Shargin Andrey",
+            "email": "sharginandrei@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php": "7.*",
+        "ext-json": "*",
+        "ramsey/uuid": "4.*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\Utils\\": "./src"
+        }
+    }
+}
