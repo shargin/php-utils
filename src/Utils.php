@@ -100,4 +100,9 @@ class Utils
         $string = preg_replace('/_{2,}/', '_', $string);
         return $string;
     }
+
+    public static function toCyr(string $string): string
+    {
+        return mb_convert_encoding(trim($string), 'UTF-8', 'CP866');
+    }
 }
