@@ -11,7 +11,8 @@
     "require": {
         "php": "7.*",
         "ext-json": "*",
-        "ramsey/uuid": "4.*"
+        "ramsey/uuid": "4.*",
+        "ext-mbstring": "*"
     },
 
     "autoload": {
