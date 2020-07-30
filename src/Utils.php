@@ -18,6 +18,13 @@ class Utils
             $str = json_encode($payload);
         } elseif (is_object($payload) && method_exists($payload, "__toString")) {
             $str = $payload->__toString();
+        } elseif (is_array($payload)) {
+            $str = "";
+            foreach ($payload as $item) {
+                if (method_exists($item, "__toString")) {
+                    $str .= $item->__toString();
+                }
+            }
         } else {
             $str = json_encode($payload);
         }
