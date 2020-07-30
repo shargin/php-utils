@@ -22,7 +22,7 @@ class Utils
             $str = "";
             foreach ($payload as $item) {
                 if (method_exists($item, "__toString")) {
-                    $str .= $item->__toString();
+                    $str .= $item->__toString() . ",";
                 }
             }
         } else {
