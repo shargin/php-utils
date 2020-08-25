@@ -112,4 +112,11 @@ class Utils
     {
         return mb_convert_encoding(trim($string), 'UTF-8', 'CP866');
     }
+
+    public static function filterProductExrnalId(string $externalId): string
+    {
+        $array = explode(".", $externalId);
+        array_shift($array);
+        return implode(".", $array);
+    }
 }
